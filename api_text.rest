@@ -1,6 +1,12 @@
 GET http://localhost:8000/products
 ###
 POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+    "name": "Chen,Yu-Shiuan",
+    "price": "100"
+}
 ###
 GET http://localhost:8000/products/123
 ###
@@ -17,6 +23,13 @@ GET http://localhost:8000/orders/pen
 ###
 DELETE http://localhost:8000/orders/pen
 ###
-POST http://localhost:8000/orders  
+POST http://localhost:8000/orders 
+Content-Type: application/json
+
+{
+    "productID": "d10821040",
+    "quantity": "10"
+}
+
 ###
 GET http://localhost:8000/

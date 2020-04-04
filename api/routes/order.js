@@ -22,8 +22,13 @@ router.delete('/:orderID', function(req, res, next){
 });
 
 router.post('/', function(req, res, next){
+    const order = {
+        productID: req.body.productID,
+        quantity: req.body.quantity
+    }
     res.status(201).json({
-        message: 'Order was created'
+        message: 'Order was created',
+        order: order
     })
 })
 module.exports = router;
