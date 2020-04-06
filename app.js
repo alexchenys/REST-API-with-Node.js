@@ -4,6 +4,10 @@ const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/order');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb://localhost:27017/node_shop', {useNewUrlParser: true, useUnifiedTopology: true })
+
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

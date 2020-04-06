@@ -4,15 +4,20 @@ POST http://localhost:8000/products
 Content-Type: application/json
 
 {
-    "name": "Chen,Yu-Shiuan",
-    "price": "100"
+    "name": "Skin Advance",
+    "price": "600"
 }
 ###
-GET http://localhost:8000/products/123
+GET http://localhost:8000/products/5e8b7ab88466300b9c720e68
 ###
-PATCH http://localhost:8000/products/123
+PATCH http://localhost:8000/products/5e8b7ab88466300b9c720e68
+Content-Type: application/json
+
+[
+    {"propName": "name", "value": "onePlus"}
+]
 ### 
-DELETE  http://localhost:8000/products/123
+DELETE  http://localhost:8000/products/5e8b6230f120df2aac6d81a8
 ###
 
 GET http://localhost:8000/orders 
