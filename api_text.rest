@@ -8,31 +8,32 @@ Content-Type: application/json
     "price": "600"
 }
 ###
-GET http://localhost:8000/products/5e8b7ab88466300b9c720e68
+GET http://localhost:8000/products/5e8ab6f37df8771e14902af4
 ###
 PATCH http://localhost:8000/products/5e8b7ab88466300b9c720e68
 Content-Type: application/json
 
 [
-    {"propName": "name", "value": "onePlus"}
+    {"propName": "name", "value": "freeplus"}
 ]
 ### 
-DELETE  http://localhost:8000/products/5e8b6230f120df2aac6d81a8
+DELETE  http://localhost:8000/products/5e8ab6f37df8771e14902af4
 ###
 
 GET http://localhost:8000/orders 
 
 ###
-GET http://localhost:8000/orders/pen
+GET http://localhost:8000/orders/5e8ccbd735fc6608a0ca576f
+
 
 ###
-DELETE http://localhost:8000/orders/pen
+DELETE http://localhost:8000/orders/5e8ccbd735fc6608a0ca576f
 ###
 POST http://localhost:8000/orders 
 Content-Type: application/json
 
 {
-    "productID": "d10821040",
+    "productID": "5e8b7ab88466300b9c720e68",
     "quantity": "10"
 }
 
